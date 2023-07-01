@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Water Quality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"
+        integrity="sha512-4UKI/XKm3xrvJ6pZS5oTRvIQGIzZFoXR71rRBb1y2N+PbwAsKa5tPl2J6WvbEvwN3TxQCm8hMzsl/pO+82iRlg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+
+
+
+<body>
+    <h1 class="text-center text-cyan-500 text-2xl">Water Quality Dashboard</h1>
+    <main class="mt-10">
+        <div class="">
+            <div class="flex justify-center space ">
+                <div id="region-select">
+                </div>
+                <div id="district-select">
+                </div>
+
+            </div>
+            <div class="m-auto grid grid-cols-2 grid-rows-3 mt-5">
+                <div>
+                    <h3>BarChart showing turbidity per District</h3>
+                    <div class="" id="barchart"></div>
+                </div>
+                <div>
+                    <h3> Donut Chart showing turbidity per District</h3>
+                    <div class="" id="donughtchart"></div>
+                </div>
+                <div>
+                    <h3> Scatter plot showing turbidity per District</h3>
+                    <div class="" id="Scatterplot"></div>
+                </div>
+                <div>
+                    <h3> Bubble Chart showing turbidity per District</h3>
+                    <div class="" id="BubbleChart"></div>
+                </div>
+                <div>
+                    <h3> Group Bar Chart showing turbidity per District</h3>
+                    <div class="" id="groupedbarchart"></div>
+                </div>
+
+
+            </div>
+        </div>
+        <h1 class="text-center text-cyan-500 text-xl">(c) Sharif Kiggundu </h1>
+    </main>
+    <!-- <script "https: //cdn.tailwindcss.com"></script> -->
+    <script type="module" src="script.js">
+    </script>
+</body>
+
+</html>

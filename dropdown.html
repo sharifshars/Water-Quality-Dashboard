@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dropdown Filter</title>
+</head>
+
+<body>
+    <div>
+        <label for="district-select">Select District:</label>
+        <select id="district-select"></select>
+    </div>
+    <div>
+        <label for="property-select">Select Property:</label>
+        <select id="property-select"></select>
+    </div>
+    <div>
+        <label for="region-select">Select Region:</label>
+        <select id="region-select"></select>
+    </div>
+
+    <!-- Place your chart elements here -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+Sample data (replace with your actual data)
+const data = [
+{ district: "District A", properties: { turbidity: 10, ph: 7 }, region: "Region X" },
+{ district: "District B", properties: { turbidity: 20, ph: 8 }, region: "Region Y" },
+{ district: "District C", properties: { turbidity: 15, ph: 6 }, region: "Region X" },
+{ district: "District D", properties: { turbidity: 25, ph: 7 }, region: "Region Z" },
+];
+
+// Get the select elements
+const districtSelect = document.getElementById("district-select");
+const propertySelect = document.getElementById("property-select");
+const regionSelect = document.getElementById("region-select");
+
+// Populate the dropdown options
+const districts = Array.from(new Set(data.map(d => d.district)));
+districts.forEach(district => {
+const option = document.createElement("option");
+option.text = district;
+districtSelect.add(option);
+});
+
+const properties = Object.keys(data[0].properties);
+properties.forEach(property => {
+const option = document.createElement("option");
+option.text = property;
+propertySelect.add(option);
+});
+
+const regions = Array.from(new Set(data.map(d => d.region)));
+regions.forEach(region => {
+const option = document.createElement("option");
+option.text = region;
+regionSelect.add(option);
+});
+
+// Event listener for filtering the charts
+districtSelect.addEventListener("change", () => {
+const selectedDistrict = districtSelect.value;
+// Filter the charts based on the selected district
+// Update the charts accordingly
+});
+
+propertySelect.addEventListener("change", () => {
+const selectedProperty = propertySelect.value;
+// Filter the charts based on the selected property
+// Update the charts accordingly
+});
+
+regionSelect.addEventListener("change", () => {
+const selectedRegion = regionSelect.value;
+// Filter the charts based on the selected region
+// Update the charts accordingly
+});
